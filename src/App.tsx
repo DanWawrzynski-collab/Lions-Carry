@@ -161,18 +161,28 @@ export default function App() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="w-full rounded-[3rem] overflow-hidden shadow-2xl border border-slate-200 bg-white"
+            className="w-full rounded-[3rem] overflow-hidden shadow-2xl border border-slate-200 bg-white group relative"
           >
+            <div className="absolute inset-0 bg-slate-50 flex items-center justify-center animate-pulse">
+               <Backpack className="w-12 h-12 text-slate-200" />
+            </div>
             <img 
-              src="https://lh3.googleusercontent.com/d/AP1GczPrO9K9XyZ9_tZ0E_2_m_v_G_v_H_i_J_q_S_w_V_y_E_y_T_n_o_z_K_W_k" 
+              src="https://lh3.googleusercontent.com/pw/AP1GczPrO9K9XyZ9_tZ0E_2_m_v_G_v_H_i_J_q_S_w_V_y_E_y_T_n_o_z_K_W_k=w1600-h900-s-no-gm" 
               alt="Performance Backpack Variations 2026 Comparison" 
-              className="w-full h-auto min-h-[300px] object-contain"
+              className="w-full h-auto min-h-[400px] object-cover relative z-10 transition-opacity duration-500 opacity-0"
+              onLoad={(e) => (e.target as HTMLImageElement).classList.remove('opacity-0')}
               referrerPolicy="no-referrer"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
+                // Professional fallback if the private link still fails
                 target.src = "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=2000&auto=format&fit=crop";
+                target.classList.remove('opacity-0');
+                console.warn("User image failed to load. Showing high-quality fallback.");
               }}
             />
+            <div className="absolute bottom-6 left-6 z-20 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full border border-slate-200 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+               <span className="text-[10px] font-bold text-slate-900 uppercase tracking-widest">Model Year 2026 Fleet</span>
+            </div>
           </motion.div>
 
           <motion.div 
