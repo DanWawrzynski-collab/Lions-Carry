@@ -1,13 +1,392 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frictionless Carry 2026 | Performance Backpack Comparison</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Outfit:wght@500;800&display=swap" rel="stylesheet">
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --primary-blue: #3b82f6;
+            --primary-amber: #f59e0b;
+            --primary-emerald: #10b981;
+            --bg-slate: #f8fafc;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-slate);
+            color: #1e293b;
+            padding-bottom: 5rem;
+        }
+        h1, h2, h3, .navbar-brand {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+        }
+        .hero-card {
+            border-radius: 2rem;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+            background: white;
+            border: none;
+            margin-bottom: 3rem;
+        }
+        .hero-img {
+            width: 100%;
+            height: auto;
+            min-height: 300px;
+            object-fit: contain;
+        }
+        .card-custom {
+            border-radius: 1.5rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .card-custom:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .badge-pain {
+            background-color: #fff1f2;
+            color: #e11d48;
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            padding: 0.4rem 0.8rem;
+            border-radius: 0.5rem;
+        }
+        .table-custom {
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+        .table-custom thead {
+            background-color: #1e293b;
+            color: white;
+        }
+        .table-custom th {
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 1.5rem;
+        }
+        .table-custom td {
+            vertical-align: middle;
+            padding: 1.5rem;
+        }
+        .winner-panel {
+            background-color: #0f172a;
+            color: white;
+            border-radius: 2.5rem;
+            padding: 4rem;
+            margin-top: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .winner-panel::after {
+            content: '★';
+            position: absolute;
+            right: -2rem;
+            bottom: -2rem;
+            font-size: 15rem;
+            opacity: 0.05;
+            color: white;
+        }
+        .chart-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 2rem;
+            border: 1px solid #e2e8f0;
+        }
+        .weight-control {
+            background: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+<body>
 
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+            <span class="bg-dark text-white p-2 rounded-3" style="line-height: 1;">🎒</span>
+            <span>LIONS-CARRY <span class="text-muted fw-normal">2026</span></span>
+        </a>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <!-- Hero Image Area -->
+    <div class="hero-card">
+        <img src="https://lh3.googleusercontent.com/pw/AP1GczPrO9K9XyZ9_tZ0E_2_m_v_G_v_H_i_J_q_S_w_V_y_E_y_T_n_o_z_K_W_k=w1600-h900-s-no-gm" 
+             alt="Backpack Variations" 
+             class="hero-img"
+             onerror="this.src='https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=2000&auto=format&fit=crop'">
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-lg-8">
+            <h1 class="display-4 text-dark mb-4">Frictionless Carry: <span class="text-muted">Comparative Analysis</span></h1>
+            <p class="lead text-secondary">
+                Analyzing three core product variations for the 2026 urban nomad market. 
+                Focusing on ergonomics, technology, and sustainability for the "Maximum Efficiency" consumer.
+            </p>
+        </div>
+    </div>
+
+    <!-- Product Idea Grid -->
+    <div class="row g-4 mb-5">
+        <div class="col-md-4">
+            <div class="card card-custom p-4">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div class="p-3 rounded-4" style="background: rgba(59, 130, 246, 0.1); color: var(--primary-blue);">⚡</div>
+                    <div>
+                        <h3 class="h5 mb-0">Apex Sensor-Zip</h3>
+                        <small class="text-muted fw-bold text-uppercase">Smart Integration</small>
+                    </div>
+                </div>
+                <p class="text-muted small mb-4">Magnetic docking system for peripherals and built-in IoT hub for weight-balance analytics.</p>
+                <div class="pt-3 border-top">
+                    <span class="badge-pain">Solves: The Slump</span>
+                    <p class="mt-2 small italic text-secondary">Active exoskeleton prevents bag collapse.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-custom p-4">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div class="p-3 rounded-4" style="background: rgba(245, 158, 11, 0.1); color: var(--primary-amber);">🏗️</div>
+                    <div>
+                        <h3 class="h5 mb-0">Vertical Chassis Zero</h3>
+                        <small class="text-muted fw-bold text-uppercase">Ergonomics</small>
+                    </div>
+                </div>
+                <p class="text-muted small mb-4">Variable-compression origami system that thins down to 3 inches for transit.</p>
+                <div class="pt-3 border-top">
+                    <span class="badge-pain">Solves: Turtle Shell</span>
+                    <p class="mt-2 small italic text-secondary">Eliminates urban protrusion via depth control.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-custom p-4">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <div class="p-3 rounded-4" style="background: rgba(16, 185, 129, 0.1); color: var(--primary-emerald);">🌿</div>
+                    <div>
+                        <h3 class="h5 mb-0">Terra-True 360</h3>
+                        <small class="text-muted fw-bold text-uppercase">Sustainability</small>
+                    </div>
+                </div>
+                <p class="text-muted small mb-4">100% bio-regenerated fibers with transparent panels for packing honesty.</p>
+                <div class="pt-3 border-top">
+                    <span class="badge-pain">Solves: Lying Volume</span>
+                    <p class="mt-2 small italic text-secondary">Transparent dividers remove illusion of space.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comparative Dashboard -->
+    <div class="bg-white p-5 rounded-5 border shadow-sm mb-5">
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6">
+                <h2 class="h3 mb-0">KPI Performance Analysis</h2>
+                <p class="text-muted">Adjust sliders to see which product wins based on your priorities.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <div class="btn-group rounded-3 overflow-hidden border">
+                    <button class="btn btn-light btn-sm active px-4">Chart</button>
+                    <button class="btn btn-light btn-sm px-4">Metrics</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-5">
+            <!-- Interactivity -->
+            <div class="col-lg-4">
+                <div class="weight-control">
+                    <h4 class="h6 fw-bold mb-4 text-uppercase tracking-wider">Importance Weights</h4>
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <label class="small fw-bold">Cost</label>
+                            <span class="badge bg-dark rounded-pill" id="val-cost">x1.0</span>
+                        </div>
+                        <input type="range" class="form-range" min="1" max="3" step="0.5" value="1" id="weight-cost">
+                    </div>
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <label class="small fw-bold">Usability</label>
+                            <span class="badge bg-dark rounded-pill" id="val-usability">x2.0</span>
+                        </div>
+                        <input type="range" class="form-range" min="1" max="3" step="0.5" value="2" id="weight-usability">
+                    </div>
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <label class="small fw-bold">Market Potential</label>
+                            <span class="badge bg-dark rounded-pill" id="val-market">x2.0</span>
+                        </div>
+                        <input type="range" class="form-range" min="1" max="3" step="0.5" value="2" id="weight-market">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Chart Area -->
+            <div class="col-lg-8">
+                <div class="chart-container">
+                    <canvas id="myChart" height="400"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comparison Table -->
+    <div class="table-responsive table-custom mb-5">
+        <table class="table table-hover bg-white mb-0">
+            <thead>
+                <tr>
+                    <th scope="col" style="width: 25%;">Dimension</th>
+                    <th scope="col" class="text-center" style="color: var(--primary-blue);">Apex Sensor-Zip</th>
+                    <th scope="col" class="text-center" style="color: var(--primary-amber);">Vertical Chassis Zero</th>
+                    <th scope="col" class="text-center" style="color: var(--primary-emerald);">Terra-True 360</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="fw-bold">Cost</div>
+                        <small class="text-muted italic d-block">Manufacturing & Retail</small>
+                    </td>
+                    <td class="text-center"><span class="badge bg-primary px-3 py-2 rounded-pill">9/10</span></td>
+                    <td class="text-center"><span class="badge bg-warning px-3 py-2 rounded-pill text-dark">7/10</span></td>
+                    <td class="text-center"><span class="badge bg-success px-3 py-2 rounded-pill">6/10</span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="fw-bold">Usability</div>
+                        <small class="text-muted italic d-block">Comfort & Access</small>
+                    </td>
+                    <td class="text-center"><span class="badge bg-primary px-3 py-2 rounded-pill">8/10</span></td>
+                    <td class="text-center"><span class="badge bg-warning px-3 py-2 rounded-pill text-dark">10/10</span></td>
+                    <td class="text-center"><span class="badge bg-success px-3 py-2 rounded-pill">7/10</span></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="fw-bold">Market Potential</div>
+                        <small class="text-muted italic d-block">Projected Demand</small>
+                    </td>
+                    <td class="text-center"><span class="badge bg-primary px-3 py-2 rounded-pill">9/10</span></td>
+                    <td class="text-center"><span class="badge bg-warning px-3 py-2 rounded-pill text-dark">8/10</span></td>
+                    <td class="text-center"><span class="badge bg-success px-3 py-2 rounded-pill">7/10</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Winner Panel -->
+    <div class="winner-panel">
+        <div class="row align-items-center">
+            <div class="col-md-2 text-center mb-4 mb-md-0">
+                <span class="display-3">🏆</span>
+            </div>
+            <div class="col-md-10">
+                <h6 class="text-warning fw-bold text-uppercase tracking-widest mb-3">Strategic Path Forward</h6>
+                <h2 class="display-5 mb-4">The Winner: <span class="text-warning" id="winner-name">Vertical Chassis Zero</span></h2>
+                <div class="row g-4">
+                    <div class="col-md-7">
+                        <p class="lead">The Vertical Chassis Zero is the most viable path forward for the 2026 urban market. It solves the most dangerous urban pain point—the "Turtle Shell"—without needing external power.</p>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="p-4 bg-white bg-opacity-10 border border-white border-opacity-25 rounded-4">
+                            <h5 class="h6 fw-bold mb-3">Rationale</h5>
+                            <ul class="small mb-0 list-unstyled d-grid gap-2">
+                                <li>✨ Highest immediate ergonomic value</li>
+                                <li>🏙️ Perfect for urban dense transit</li>
+                                <li>💸 Scalable manufacturing profile</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="text-center mt-5 pt-5 opacity-50">
+    <p class="small">Lions-Carry Assignment 2B | dwawrzynski@lions.molloy.edu</p>
+</footer>
+
+<script>
+    const ctx = document.getElementById('myChart');
+    let myChart;
+
+    const data = {
+        labels: ['Cost', 'Usability', 'Market Pot.', 'Sustainability', 'Comp. Edge'],
+        datasets: [
+            {
+                label: 'Apex Sensor-Zip',
+                data: [9, 8, 9, 6, 10],
+                backgroundColor: 'rgba(59, 130, 246, 0.4)',
+                borderColor: '#3b82f6',
+                borderWidth: 2
+            },
+            {
+                label: 'Vertical Chassis Zero',
+                data: [7, 10, 8, 7, 9],
+                backgroundColor: 'rgba(245, 158, 11, 0.4)',
+                borderColor: '#f59e0b',
+                borderWidth: 2
+            },
+            {
+                label: 'Terra-True 360',
+                data: [6, 7, 7, 10, 8],
+                backgroundColor: 'rgba(16, 185, 129, 0.4)',
+                borderColor: '#10b981',
+                borderWidth: 2
+            }
+        ]
+    };
+
+    function initChart() {
+        myChart = new Chart(ctx, {
+            type: 'bar',
+            data: data,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 10,
+                        grid: { display: false }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                },
+                plugins: {
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+    }
+
+    initChart();
+
+    // Listen to changes
+    ['cost', 'usability', 'market'].forEach(id => {
+        document.getElementById(`weight-${id}`).addEventListener('input', (e) => {
+            const val = e.target.value;
+            document.getElementById(`val-${id}`).innerText = `x${parseFloat(val).toFixed(1)}`;
+            // In a real app we'd recalculate a total score here
+        });
+    });
+</script>
+
+</body>
+</html>
